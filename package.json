@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "tailwind-watch": "tailwindcss build -i ./src/App.css -o ./src/App-t.css --watch",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "concurrently \"vite\" \"npm run tailwind-watch\""
   },
   "dependencies": {
     "react": "^18.3.1",
